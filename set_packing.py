@@ -70,37 +70,31 @@ def combinations(variables, r):
 
 def cnf_to_file(cnf, num_variables, output_file):
     with open(output_file, 'w') as file:
-        file.write(f"CNF {num_variables} {len(cnf)}\n")
+        file.write(f"p cnf {num_variables} {len(cnf)}\n")
         for clause in cnf:
             file.write(" ".join(map(str, clause)) + " 0\n")
 
 
 def call_solver(cnf_file):
-    glucose_path = "glucose-syrup"
+    glucose_path = "glucose"
     result_file = cnf_file + ".result"
-    os.system(f"{glucose_path} {cnf_file} > {result_file}")
-    if not os.path.exists(result_file) or os.stat(result_file).st_size == 0:
-        raise RuntimeError(f"Glucose failed to generate a valid result file: {result_file}")
+    os.system(f"./{glucose_path} {cnf_file} > {result_file}")
     return result_file
 
 def parse_glucose_output(result_file, variables):
     with open(result_file, 'r') as file:
         lines = file.readlines()
-
-    if "UNSATISFIABLE" in lines[0]:
-        return None  
-    elif "SATISFIABLE" in lines[0]:
-        for line in lines:
-            if line.startswith("v "):  
-                model = list(map(int, line[2:].strip().split()))
-                return [v for v in variables if v in model]
+    if str(lines[-1].split(' ')[1][:-1]) == "SATISFIABLE":
+        return True
+    elif lines[-1].split(' ')[1][:-1] == "UNSATISFIABLE":
+        return False 
     else:
         raise ValueError("Unexpected solver output.")
     
 
 def main():
     if len(sys.argv) < 3:
-        print("Usage: python set_packing_decision.py <input_instance> <output_cnf>")
+        print("Usage: python set_packing.py <input_instance> <output_cnf>")
         sys.exit(1)
 
     input_file = sys.argv[1]
@@ -116,10 +110,10 @@ def main():
 
     try:
         solution = parse_glucose_output(result_file, variables)
-        if solution is None:
-            print("NO: It is not possible to select at least", t, "disjoint sets.")
+        if solution:
+            print("YES: It is possible to select at least", t, "disjoint sets.")
         else:
-            print("YES: Selected sets (indices):", solution)
+            print("NO: It is not possible to select at least", t, "disjoint sets.")
     except ValueError as e:
         print(f"Error: {e}")
 
