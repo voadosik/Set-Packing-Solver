@@ -115,5 +115,5 @@ The system used for testing was a machine with the following specifications:
 - **Operating System**: WSL Ubuntu (Windows Subsystem for Linux)
 
 ### Performance Summary
-- **Time to Solve**: 38.5 seconds
+- **Time to Solve**: 18.5 seconds
 
