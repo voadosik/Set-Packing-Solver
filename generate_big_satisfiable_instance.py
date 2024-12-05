@@ -12,7 +12,7 @@ universe_size = 100
 set_size = 3          
 threshold = 20       
 
-output_file = "large_satisfiable_instance.txt"
+output_file = "large_satisfiable_instance"
 
 generate_large_satisfiable_instance(universe_size, set_size, threshold, output_file)
 print(f"Instance written to {output_file}")
