@@ -1,5 +1,6 @@
 import os
 import sys
+from itertools import combinations
 
 def load_instance(input_file_name):
     with open(input_file_name, 'r') as file:
@@ -19,54 +20,17 @@ def encode(sets, t):
     cnf = []
     n = len(sets)
     variables = list(range(1, n + 1))
-
+   
     for i in range(n):
         for j in range(i + 1, n):
-            if sets[i].intersection(sets[j]):
+            if not sets[i].isdisjoint(sets[j]):
                 cnf.append([-variables[i], -variables[j]])
-
     if t > 0:
         for combination in combinations(variables, n-t+1):
-            cnf.append([-x for x in combination])
+            cnf.append(list(combination))
                                         
     return cnf, variables
 
-
-def combinations(variables, r):
-    """
-    Generate all possible combinations of r elements from the variables.
-    Args:
-        variables (list): Input list of variables
-        r (int): Length of combinations to generate
-    
-    Returns:
-        list: List of all unique combinations of the given size
-    """
-    pool = tuple(variables)
-    n = len(pool)
-    
-    if r > n:
-        return []
-    
-    if r == 1:
-        return [i for i in variables] 
-        
-    indices = list(range(r))
-    
-    result = [tuple(pool[i] for i in indices)]
-    
-    while True:
-        for i in reversed(range(r)):
-            if indices[i] != n - r + i:
-                break
-        else:
-            return result
-        indices[i] += 1
-        for j in range(i+1, r):
-            indices[j] = indices[j-1] + 1
-        result.append(tuple(pool[i] for i in indices))
-    
-    return result
 
 def cnf_to_file(cnf, num_variables, output_file):
     with open(output_file, 'w') as file:
