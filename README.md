@@ -122,3 +122,9 @@ The system used for testing was a machine with the following specifications:
 - **20 to 70 elements**
 
 ![plot_20_70](https://github.com/user-attachments/assets/8c79f28c-ec47-4c94-a947-61ecfcbccf19)
+
+- **70 to 100 elements**
+
+![plot_70_100](https://github.com/user-attachments/assets/0393acc3-eecf-4662-8ccf-ed92f39bab2c)
+
+  
