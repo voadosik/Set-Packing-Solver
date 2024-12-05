@@ -119,11 +119,11 @@ The system used for testing was a machine with the following specifications:
 
 ### Time to generate and encode instances for SAT solver
 
-- **20 to 70 elements**
+- **20 to 70 elements in the universe**
 
 ![plot_20_70](https://github.com/user-attachments/assets/8c79f28c-ec47-4c94-a947-61ecfcbccf19)
 
-- **70 to 100 elements**
+- **70 to 100 elements in the universe**
 
 ![plot_70_100](https://github.com/user-attachments/assets/0393acc3-eecf-4662-8ccf-ed92f39bab2c)
 
