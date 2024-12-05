@@ -10,9 +10,9 @@ def generate_large_satisfiable_instance(universe_size, set_size, threshold, outp
     print(f"Instance written to {output_file}")
 
 def main():
-    universe_size = 100
+    universe_size = 30
     set_size = 3
-    threshold = 20
+    threshold = 5
     output_file = "large_satisfiable_instance"
 
     if len(sys.argv) == 5:
