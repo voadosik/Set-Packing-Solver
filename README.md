@@ -110,10 +110,10 @@ The experiment was conducted to evaluate the performance of the Set Packing inst
 - **Threshold**: 8 subsets
 
 The system used for testing was a machine with the following specifications:
-- **Processor**: AMD Ryzen 5 7600X
-- **RAM**: 32 GB
+- **Processor**: i7-9750H
+- **RAM**: 8 GB
 - **Operating System**: WSL Ubuntu (Windows Subsystem for Linux)
 
 ### Performance Summary
-- **Time to Generate Clauses**: 2 seconds
-- **CPU Time on SAT Solver**: 0.33 seconds
+- **Time to Solve**: 38.5 seconds
+
