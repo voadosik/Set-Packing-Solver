@@ -69,7 +69,6 @@ def main():
     clauses, variables = encode(sets, t)
     cnf_to_file(clauses, len(variables), cnf_file)
 
-    print(f"Solving the instance using Glucose...")
     result_file = call_solver(cnf_file)
 
     try:
