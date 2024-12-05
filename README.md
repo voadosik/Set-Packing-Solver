@@ -17,13 +17,12 @@ The **Set Packing Problem** is a combinatorial decision problem where the object
 
 ## CNF Encoding
 
-The Set Packing Problem is encoded into DIMACS CNF format for compatibility with SAT solvers such as Glucose. The encoding involves the following steps:
+The Set Packing Problem is encoded into DIMACS CNF format. The encoding involves the following steps:
 
 ### Propositional Variables
 - Each subset \( S_i \) is represented by a propositional variable `x_i`, where:
   - `x_i = true` indicates that subset \( S_i \) is selected.
   - `x_i = false` indicates that subset \( S_i \) is not selected.
-- The total number of variables equals the number of subsets.
 
 ### Encoding Constraints
 1. **Disjoint Subsets**:
