@@ -115,13 +115,6 @@ The system used for testing was a machine with the following specifications:
 - **Operating System**: WSL Ubuntu (Windows Subsystem for Linux)
 - **Solver Used**: Glucose SAT solver
 
-### Experiment Process
-1. **Instance Generation**: 
-   The instance was generated using the `generate_valid_instance` function, which outputs a valid Set Packing instance, with 100 elements, 3-element subsets, and a threshold of 8. The process took 2 seconds to generate the clauses.
-
-2. **SAT Solver Execution**:
-   After generating the instance, the CNF representation was fed to the SAT solver (Glucose). The solver processed the instance, and the time to compute the result was **0.33 seconds**.
-
 ### Performance Summary
 - **Time to Generate Clauses**: 2 seconds
 - **CPU Time on SAT Solver**: 0.33 seconds
