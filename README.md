@@ -95,9 +95,20 @@ The CNF formula is output in DIMACS format:
 
 ## User Documentation
 
-### Input Format:
+### Input File Format:
 The input consists of:
 1. An integer `T`: The threshold number of subsets.
 2. A list of subsets, where each subset is represented by space-separated integers.
 
+Basic usage: 
+```
+set_packing.py <input_instance> <output_cnf>
+```
+
 #### Example:
+
+* `instance_satisfiable`: Small satisfiable instance.
+* `instance_satisfiable`: Small unsatisfiable instance.
+* `large_satisfiable_instance`: Big satisfiable instance, can generate more using `generate_large_satisfiable_instance.py` file.
+
+
