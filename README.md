@@ -99,3 +99,29 @@ generate_instance.py <universe_size> <set_size> <threshold> <output_file>
 1 3
 ```
 - This instance is unsatisfiable, as it's impossible to select 3 disjoint subsets.
+
+## Experiment Report
+
+### Setup
+The experiment was conducted to evaluate the performance of the Set Packing instance generator and the SAT solver. The parameters used for the experiment were:
+
+- **Universe Size**: 100
+- **Set Size**: 3 elements per subset
+- **Threshold**: 8 subsets
+
+The system used for testing was a machine with the following specifications:
+- **Processor**: AMD Ryzen 5 7600X
+- **RAM**: 32 GB
+- **Operating System**: WSL Ubuntu (Windows Subsystem for Linux)
+- **Solver Used**: Glucose SAT solver
+
+### Experiment Process
+1. **Instance Generation**: 
+   The instance was generated using the `generate_valid_instance` function, which outputs a valid Set Packing instance, with 100 elements, 3-element subsets, and a threshold of 8. The process took 2 seconds to generate the clauses.
+
+2. **SAT Solver Execution**:
+   After generating the instance, the CNF representation was fed to the SAT solver (Glucose). The solver processed the instance, and the time to compute the result was **0.33 seconds**.
+
+### Performance Summary
+- **Time to Generate Clauses**: 2 seconds
+- **CPU Time on SAT Solver**: 0.33 seconds
