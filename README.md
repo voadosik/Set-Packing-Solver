@@ -111,7 +111,7 @@ The experiment was conducted to evaluate the performance of the Set Packing inst
 
 The system used for testing was a machine with the following specifications:
 - **Processor**: i7-9750H
-- **RAM**: 8 GB
+- **RAM**: 16 GB
 - **Operating System**: WSL Ubuntu (Windows Subsystem for Linux)
 
 ### Performance Summary
