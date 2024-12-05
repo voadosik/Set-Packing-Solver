@@ -113,7 +113,6 @@ The system used for testing was a machine with the following specifications:
 - **Processor**: AMD Ryzen 5 7600X
 - **RAM**: 32 GB
 - **Operating System**: WSL Ubuntu (Windows Subsystem for Linux)
-- **Solver Used**: Glucose SAT solver
 
 ### Performance Summary
 - **Time to Generate Clauses**: 2 seconds
