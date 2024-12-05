@@ -89,5 +89,5 @@ generate_instance.py <universe_size> <set_size> <threshold> <output_file>
 4
 1 3 4
 ```
-*This instance is satisfiable, as subsets {1 2} and {4} form a valid solution.
+-This instance is satisfiable, as subsets {1 2} and {4} form a valid solution.
 
