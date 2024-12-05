@@ -101,19 +101,3 @@ The input consists of:
 2. A list of subsets, where each subset is represented by space-separated integers.
 
 #### Example:
-
-### DIMACS CNF Format
-The CNF formula is output in DIMACS format:
-- The header specifies the number of variables and clauses:
-  ```plaintext
-  p cnf <num_variables> <num_clauses>
-
-
-## User Documentation
-
-### Input Format:
-The input consists of:
-1. An integer `T`: The threshold number of subsets.
-2. A list of subsets, where each subset is represented by space-separated integers.
-
-#### Example:
