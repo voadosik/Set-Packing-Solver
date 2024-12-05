@@ -111,4 +111,13 @@ set_packing.py <input_instance> <output_cnf>
 * `instance_satisfiable`: Small unsatisfiable instance.
 * `large_satisfiable_instance`: Big satisfiable instance, can generate more using `generate_large_satisfiable_instance.py` file.
 
+`generate_large_satisfiable_instance.py` basic usage:
+```
+generate_instance.py <universe_size> <set_size> <threshold> <output_file>
+```
+- `universe_size`: The size of the universe.
+- `set_size`: The number of elements in each subset.
+- `threshold`: The minimum number of subsets that must be selected.
+- `output_file`: The name of the output file where the instance will be saved.
+
 
