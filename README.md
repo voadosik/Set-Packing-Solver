@@ -65,6 +65,7 @@ Basic usage:
 set_packing.py <input_instance> <output_cnf>
 ```
 
+
 #### Example:
 
 * `instance_satisfiable`: Small satisfiable instance.
@@ -80,4 +81,13 @@ generate_instance.py <universe_size> <set_size> <threshold> <output_file>
 - `threshold`: The minimum number of subsets that must be selected.
 - `output_file`: The name of the output file where the instance will be saved.
 
+`instance_satisfiable`:
+```plaintext
+2
+1 2
+2 3
+4
+1 3 4
+```
+*This instance is satisfiable, as subsets {1 2} and {4} form a valid solution.
 
