@@ -28,9 +28,9 @@ The Set Packing Problem is encoded into DIMACS CNF format for compatibility with
 ### Encoding Constraints
 1. **Disjoint Subsets**:
    - If two subsets \( S_i \) and \( S_j \) overlap, they cannot both be selected. This is encoded as:
-     \[
-     \neg x_i \lor \neg x_j
-     \]
+     ```plaintext
+     ¬x_i ∨ ¬x_j
+     ```
      or in DIMACS CNF:
      ```plaintext
      -i -j 0
@@ -38,9 +38,9 @@ The Set Packing Problem is encoded into DIMACS CNF format for compatibility with
 
 2. **Threshold Requirement**:
    - To ensure that at least \( T \) subsets are selected, we enforce a cardinality constraint. This is encoded as:
-     \[
-     x_{i_1} \lor x_{i_2} \lor \ldots \lor x_{i_{n-T+1}}
-     \]
+     ```plaintext
+     x_{i_1} ∨ x_{i_2} ∨ ... ∨ x_{i_{n-T+1}}
+     ```
      or in DIMACS CNF:
      ```plaintext
      i_1 i_2 ... i_{n-T+1} 0
