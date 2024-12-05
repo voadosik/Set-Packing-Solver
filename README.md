@@ -117,4 +117,8 @@ The system used for testing was a machine with the following specifications:
 ### Performance Summary
 - **Time to Solve**: 18.5 seconds
 
+### Time to generate and encode instances for SAT solver
+
+- **20 to 70 elements**
+
 ![plot_20_70](https://github.com/user-attachments/assets/8c79f28c-ec47-4c94-a947-61ecfcbccf19)
