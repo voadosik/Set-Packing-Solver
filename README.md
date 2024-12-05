@@ -98,3 +98,4 @@ generate_instance.py <universe_size> <set_size> <threshold> <output_file>
 2 3
 1 3
 ```
+- This instance is unsatisfiable, as it's impossible to select 3 disjoint subsets.
